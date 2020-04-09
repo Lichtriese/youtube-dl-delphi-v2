@@ -376,10 +376,7 @@
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
         <BT_BuildType>Debug</BT_BuildType>
-        <DCC_UnitSearchPath>D:\Projects10\YTDLL;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <AppDPIAwarenessMode>PerMonitor</AppDPIAwarenessMode>
-        <DCC_ExeOutput>D:\Projects10\YTDLL\</DCC_ExeOutput>
-        <DCC_DcuOutput>D:\Projects10\YTDLL\</DCC_DcuOutput>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
@@ -404,13 +401,13 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="D:\Include\delphi-javascript\jsDbgServer.pas"/>
-        <DCCReference Include="D:\Include\delphi-javascript\jsintf.pas"/>
-        <DCCReference Include="D:\Include\delphi-javascript\js15decl.pas"/>
-        <DCCReference Include="D:\Include\delphi-javascript\NamedPipesImpl.pas"/>
-        <DCCReference Include="D:\Source\FH.YouTube.pas"/>
-        <DCCReference Include="D:\Source\FH.YouTube.Utils.pas"/>
-        <DCCReference Include="D:\Source\FH.YouTube.Decipher.pas"/>
+        <DCCReference Include="..\..\Include\delphi-javascript\jsDbgServer.pas"/>
+        <DCCReference Include="..\..\Include\delphi-javascript\jsintf.pas"/>
+        <DCCReference Include="..\..\Include\delphi-javascript\js15decl.pas"/>
+        <DCCReference Include="..\..\Include\delphi-javascript\NamedPipesImpl.pas"/>
+        <DCCReference Include="..\..\Source\FH.YouTube.pas"/>
+        <DCCReference Include="..\..\Source\FH.YouTube.Utils.pas"/>
+        <DCCReference Include="..\..\Source\FH.YouTube.Decipher.pas"/>
         <DCCReference Include="Unit1.pas">
             <Form>Form1</Form>
         </DCCReference>
