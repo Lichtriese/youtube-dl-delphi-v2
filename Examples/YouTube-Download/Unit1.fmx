@@ -8,6 +8,8 @@ object Form1: TForm1
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
   DesignerMasterStyle = 0
   object StatusBar1: TStatusBar
     Position.Y = 389.000000000000000000
@@ -20,16 +22,16 @@ object Form1: TForm1
   object TabControl1: TTabControl
     Align = Client
     Size.Width = 634.000000000000000000
-    Size.Height = 389.000000000000000000
+    Size.Height = 362.000000000000000000
     Size.PlatformDefault = False
     TabIndex = 0
     TabOrder = 4
     TabPosition = PlatformDefault
     Sizes = (
       634s
-      363s
+      336s
       634s
-      363s)
+      336s)
     object TabItem3: TTabItem
       CustomIcon = <
         item
@@ -48,11 +50,11 @@ object Form1: TForm1
         DataDetectorTypes = []
         Align = Client
         Size.Width = 634.000000000000000000
-        Size.Height = 250.000000000000000000
+        Size.Height = 223.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
         Viewport.Width = 630.000000000000000000
-        Viewport.Height = 246.000000000000000000
+        Viewport.Height = 219.000000000000000000
       end
       object Layout2: TLayout
         Align = Top
@@ -65,9 +67,10 @@ object Form1: TForm1
           Position.Y = 83.000000000000000000
           TabOrder = 8
           Text = 'Get'
-          OnClick = Button1Click
+          OnClick = Button9Click
         end
         object Button1: TButton
+          Enabled = False
           Position.X = 96.000000000000000000
           Position.Y = 83.000000000000000000
           TabOrder = 3
@@ -119,35 +122,14 @@ object Form1: TForm1
           Size.Height = 22.000000000000000000
           Size.PlatformDefault = False
         end
-        object Layout3: TLayout
+        object ComboBox1: TComboBox
+          Enabled = False
           Position.X = 184.000000000000000000
           Position.Y = 83.000000000000000000
           Size.Width = 433.000000000000000000
           Size.Height = 22.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 12
-          object ProgressBar1: TProgressBar
-            Align = Client
-            Orientation = Horizontal
-            Margins.Left = 5.000000000000000000
-            Margins.Top = 5.000000000000000000
-            Margins.Right = 5.000000000000000000
-            Margins.Bottom = 5.000000000000000000
-            Size.Width = 423.000000000000000000
-            Size.Height = 12.000000000000000000
-            Size.PlatformDefault = False
-          end
-          object Label1: TLabel
-            Align = Contents
-            Margins.Left = 5.000000000000000000
-            Margins.Top = 5.000000000000000000
-            Margins.Right = 5.000000000000000000
-            Margins.Bottom = 5.000000000000000000
-            Size.Width = 423.000000000000000000
-            Size.Height = 12.000000000000000000
-            Size.PlatformDefault = False
-            TextSettings.HorzAlign = Center
-          end
         end
       end
     end
@@ -203,11 +185,11 @@ object Form1: TForm1
           'https://www.youtube.com/HamdiKickProduction?v=DFYRQ_zQ-gk')
         Align = Client
         Size.Width = 634.000000000000000000
-        Size.Height = 322.000000000000000000
+        Size.Height = 295.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 7
         Viewport.Width = 614.000000000000000000
-        Viewport.Height = 318.000000000000000000
+        Viewport.Height = 291.000000000000000000
       end
       object Layout1: TLayout
         Align = Top
@@ -231,5 +213,39 @@ object Form1: TForm1
     object MenuItem1: TMenuItem
       Text = 'File'
     end
+  end
+  object Layout3: TLayout
+    Align = Bottom
+    Position.Y = 362.000000000000000000
+    Size.Width = 634.000000000000000000
+    Size.Height = 27.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    object ProgressBar1: TProgressBar
+      Align = Client
+      Orientation = Horizontal
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 624.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label1: TLabel
+      Align = Contents
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 624.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+    end
+  end
+  object SaveDialog1: TSaveDialog
+    Left = 488
+    Top = 8
   end
 end
